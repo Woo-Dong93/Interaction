@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가위바위보</title>
+    <style>
+      h1 {
+        font-size: 100px;
+        font-weight: bold;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px 30px;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      // 웹 브라우저의 요소가 모두 준비되었을 때
+      // 인터프리터의 단점을 해결
+      window.onload = function () {
+        // 한개기 때문에 all 사용x
+        const button = document.querySelector(".startBtn");
+        // 리스트로 가져오기 때문에 배열로 접근
+        const h1 = document.getElementsByTagName("h1")[0];
+
+        const handArr = ["가위", "바위", "보"];
+
+        button.addEventListener("click", () => {
+          // Math.random() : 0~1까지 랜덤한 실수 등장
+          // 반올림과 같이 사용해야 0, 1, 2를 사용할 수 있음
+          // const num = Math.round(Math.random() * 2);
+
+          // 배열의 갯수에 따라 하고 싶을 때
+          const num = Math.round(Math.random() * (handArr.length - 1));
+          h1.innerHTML = handArr[num];
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button type="button" class="startBtn">리셋</button>
+    <h1>대기</h1>
+  </body>
+</html>

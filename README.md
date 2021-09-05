@@ -1,2 +1,5 @@
 # Interaction
-프론트 엔드 개발자의 Interaction 공부
+### 1. 돌림판 구현
+
+![](./img/sample_1.gif)
+
